@@ -5,7 +5,8 @@ from typing import Any, Tuple
 from assertpy import assert_that
 from kombu import Message
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from messagehandler.message_handler import MessageHandler  # noqa: E402
 
 NO_SETUP: int = 5

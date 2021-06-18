@@ -1,5 +1,5 @@
 VENV_NAME?=venv
-LIB_SRC?=src
+LIB_SRC?=messagehandler
 SRC?=${LIB_SRC} test
 ARGS?=
 FILE_CONFIG := app.ini

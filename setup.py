@@ -3,12 +3,12 @@ from setuptools import setup
 setup(
     author="David Navarro Alvarez",
     author_email="me@davengeo.com",
-    description="event-handler interface",
+    description="message-handler interface",
     url="https://github.com/davengeo/devops-tools",
-    name="event-handler-interface",
+    name="message-handler-interface",
     version='0.0.1',
     packages=[
-        'src'
+        'messagehandler'
     ],
     install_requires=[
         'kombu'
