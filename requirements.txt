@@ -1,0 +1,13 @@
+kombu
+# development
+pytest
+pytest-mock
+assertpy
+setuptools
+wheel
+twine
+flake8
+mypy
+coverage
+safety
+bandit
