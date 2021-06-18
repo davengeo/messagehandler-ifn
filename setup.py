@@ -3,10 +3,10 @@ from setuptools import setup
 setup(
     author="David Navarro Alvarez",
     author_email="me@davengeo.com",
-    description="message-handler interface",
-    url="https://github.com/davengeo/devops-tools",
-    name="message-handler-interface",
-    version='0.0.1',
+    description="messagehandler interface",
+    url="https://github.com/davengeo/messagehandler-ifn.git",
+    name="messagehandler-ifn",
+    version='0.1.0',
     packages=[
         'messagehandler'
     ],
