@@ -6,7 +6,7 @@ setup(
     description="messagehandler interface",
     url="https://github.com/davengeo/messagehandler-ifn.git",
     name="messagehandler-ifn",
-    version='0.1.0',
+    version='0.2.0',
     packages=[
         'messagehandler'
     ],

@@ -1,5 +1,4 @@
 kombu
-devops-tools-daven
 # development
 pytest
 pytest-mock

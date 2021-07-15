@@ -1,6 +1,6 @@
 import os
 import sys
-from typing import Any, Tuple
+from typing import Any, Dict, Text
 
 from assertpy import assert_that
 from kombu import Message
@@ -17,8 +17,9 @@ HANDLED: int = 15
 class TrivialHandler(MessageHandler):
     value: int = NO_SETUP
 
-    def setup(self, params: Tuple[Any, ...]) -> None:
-        self.value = params[0]
+    # noinspection Mypy
+    def setup(self, params: Dict[Text, Any]) -> None:
+        self.value = params['value']
 
     def handler(self, body: Any, message: Message) -> None:
         self.value = HANDLED
@@ -27,7 +28,7 @@ class TrivialHandler(MessageHandler):
 def test_trivial_handler() -> None:
     test: TrivialHandler = TrivialHandler()
     assert_that(test.value).is_equal_to(NO_SETUP)
-    test.setup((SETUP,))
+    test.setup({'value': SETUP})
     assert_that(test.value).is_equal_to(SETUP)
     test.handler(None, Message())
     assert_that(test.value).is_equal_to(HANDLED)
